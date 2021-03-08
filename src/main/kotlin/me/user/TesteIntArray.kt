@@ -9,22 +9,22 @@ fun main() {
     matriz[3] = 3
     matriz[4] = 2
 
-    println(onda + "\nListagem do Array usando comando for()\n" + onda)
+    println(onda + "\nListagem do Array usando comando for():\n" + onda)
     for (i in matriz) {
         println(i)
     }
 
-    println(onda + "\nListagem do Array usando comando forEach{}\n" + onda)
+    println(onda + "\nListagem do Array usando comando forEach{}:\n" + onda)
     matriz.forEach { variavel ->
         println(variavel)
     }
 
-    println(onda + "\nListagem do Array por índices usando for()\n" + onda)
+    println(onda + "\nListagem do Array por índices usando for():\n" + onda)
     for (indice in matriz.indices) {
         println(matriz[indice])
     }
 
-    println(onda + "\n" + "Ordenando o Array usando .sort" + "\n" + onda)
+    println(onda + "\n" + "Ordenando o Array usando .sort():\n" + onda)
     matriz.sort()
     matriz.forEach {
         println(it)
