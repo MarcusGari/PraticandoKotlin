@@ -1,7 +1,7 @@
 package me.user
 
 fun main() {
-    val linha = "------------------------------------"
+    val onda = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     val matriz = IntArray(5)
     matriz[0] = 1
     matriz[1] = 7
@@ -9,25 +9,26 @@ fun main() {
     matriz[3] = 3
     matriz[4] = 2
 
-    println(linha)
-    println("Listagem do Array usando comando for")
-    println(linha)
-    for (valor in matriz) {
-        println(valor)
+    println(onda + "\nListagem do Array usando comando for()\n" + onda)
+    for (i in matriz) {
+        println(i)
     }
 
-    println(linha)
-    println("Listagem do Array usando comando forEach")
-    println(linha)
+    println(onda + "\nListagem do Array usando comando forEach{}\n" + onda)
+    matriz.forEach { variavel ->
+        println(variavel)
+    }
+
+    println(onda + "\nListagem do Array por índices usando for()\n" + onda)
+    for (indice in matriz.indices) {
+        println(matriz[indice])
+    }
+
+    println(onda + "\n" + "Ordenando o Array usando .sort" + "\n" + onda)
+    matriz.sort()
     matriz.forEach {
         println(it)
     }
 
-    println(linha)
-    println("Listagem do Array por índices usando for")
-    println(linha)
-    for (indice in matriz.indices) {
-        println(matriz[indice])
-    }
 
 }
