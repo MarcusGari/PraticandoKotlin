@@ -2,17 +2,17 @@ package me.user
 //  window.open((document.getElementsByTagName('iframe')[0].attributes.src.value).replace('controls=0', 'controls=1'))
 
 fun separador(mensagem:String){
-    val linha = "^"
+    val linha = "="
     val tamanho = mensagem.length
-    print("\n")
+    print("\n\n")
     for (i in 0..(tamanho+7)) {
         print(linha)
     }
-    println("\n/   $mensagem   |")
+    println("\n|   $mensagem   |")
     for (i in 0..(tamanho+7)) {
         print(linha)
     }
-    print("\n")
+    print("\n\n")
 }
 
 fun main() {

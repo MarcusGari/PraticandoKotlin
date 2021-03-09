@@ -1,9 +1,9 @@
 package me.user
 
 fun main(){
-    val joao = Funcionario("João Antônio", 2000.0)
-    val pedro = Funcionario("Pedro Henrique", 1500.0)
-    val maria = Funcionario("Maria Raimunda", 4000.0)
+    val joao = Funcionario("João Antônio", 2000.0, "CLT")
+    val pedro = Funcionario("Pedro Henrique", 1500.0, "PJ")
+    val maria = Funcionario("Maria Raimunda", 4000.0, "CLT")
 
     val funcionarios = listOf(joao, pedro, maria)
 
@@ -16,16 +16,25 @@ fun main(){
     separador("Ordenando coleção com .sortedBy{}:")
     funcionarios.sortedBy{it.salario}.forEach{println(it)}
 
+    separador("Agrupando por contrato usando .groupBy{}:")
+    funcionarios.groupBy{it.contrato}.forEach{println(it)}
+
+    separador("Testando se as alterações são definitivas:")
+    funcionarios.forEach{println(it)}
+
 }
 
 data class Funcionario(
     val nome: String,
-    val salario: Double
+    val salario: Double,
+    val contrato: String
 ) {
     override fun toString(): String =
         """
-            Nome:    $nome
-            Salário: $salario
+            Nome:     $nome
+            Salário:  $salario
+            Contrato: $contrato
             -------------------
+            
         """.trimIndent()
 }
