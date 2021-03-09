@@ -1,15 +1,14 @@
 package me.user
 
 fun main() {
-    val onda = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     val matriz = intArrayOf(2, 3, 4, 1, 10, 7)
 
-    println(onda + "\nListagem do Array criado pelo comando intArrayOf:\n" + onda)
+    separador("Listagem do Array criado pelo comando intArrayOf:")
     matriz.forEach {
         println(it)
     }
 
-    println(onda + "\nOrdenando o 'ArrayOf' usando .sort:\n" + onda)
+    separador("Ordenando o 'ArrayOf' usando .sort:")
     matriz.sort()
     matriz.forEach {
         println(it)

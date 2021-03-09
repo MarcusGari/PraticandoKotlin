@@ -1,8 +1,21 @@
 package me.user
 //  window.open((document.getElementsByTagName('iframe')[0].attributes.src.value).replace('controls=0', 'controls=1'))
 
+fun separador(mensagem:String){
+    val linha = "^"
+    val tamanho = mensagem.length
+    print("\n")
+    for (i in 0..(tamanho+7)) {
+        print(linha)
+    }
+    println("\n/   $mensagem   |")
+    for (i in 0..(tamanho+7)) {
+        print(linha)
+    }
+    print("\n")
+}
+
 fun main() {
-    val onda = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     val matriz = IntArray(5)
     matriz[0] = 1
     matriz[1] = 7
@@ -10,22 +23,22 @@ fun main() {
     matriz[3] = 3
     matriz[4] = 2
 
-    println(onda + "\nListagem do Array usando comando for():\n" + onda)
+    separador("Listagem do Array usando comando for():")
     for (i in matriz) {
         println(i)
     }
 
-    println(onda + "\nListagem do Array usando comando forEach{}:\n" + onda)
+    separador("Listagem do Array usando comando forEach{}:")
     matriz.forEach { variavel ->
         println(variavel)
     }
 
-    println(onda + "\nListagem do Array por índices usando for():\n" + onda)
+    separador("Listagem do Array por índices usando for():")
     for (indice in matriz.indices) {
         println(matriz[indice])
     }
 
-    println(onda + "\n" + "Ordenando o Array usando .sort():\n" + onda)
+    separador("Ordenando o Array usando .sort():")
     matriz.sort()
     matriz.forEach {
         println(it)
