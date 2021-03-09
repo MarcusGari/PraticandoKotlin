@@ -8,23 +8,23 @@ fun main() {
     val funcionarios1 = setOf(joao, pedro)
     val funcionarios2 = setOf(maria)
 
-    separador("Listando coleção 'funcionarios1':")
+    separador("Listando o SET 'funcionarios1':")
     funcionarios1.forEach{println(it)}
 
-    separador("Listando coleção 'funcionarios2':")
+    separador("Listando o SET 'funcionarios2':")
     funcionarios2.forEach{println(it)}
 
-    separador("Listando a união das duas coleções acima:")
+    separador("Listando a união dos dois SETs acima:")
     val uniao = funcionarios1.union(funcionarios2)
     uniao.forEach{println(it)}
 
-    separador("Listando a união das duas coleções sem criar outra variável:")
+    separador("Listando a união dos dois SETs sem criar outra variável:")
     funcionarios1.union(funcionarios2).forEach{println(it)}
 
-    separador("Subtraindo a coleção 'funcionarios2' da união:")
+    separador("Subtraindo o SET 'funcionarios2' do união:")
     uniao.subtract(funcionarios2).forEach{println(it)}
 
-    separador("Listando a Interceção da coleção 'uniao' com 'funcionarios2':")
+    separador("Listando a Interceção do SET 'uniao' com 'funcionarios2':")
     uniao.intersect(funcionarios2).forEach{println(it)}
 
 }
