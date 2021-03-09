@@ -1,8 +1,8 @@
 package me.user
 
 fun main(){
-    val joao = Funcionario("João Antônio", 1000.0)
-    val pedro = Funcionario("Pedro Henrique", 2000.0)
+    val joao = Funcionario("João Antônio", 2000.0)
+    val pedro = Funcionario("Pedro Henrique", 1500.0)
     val maria = Funcionario("Maria Raimunda", 4000.0)
 
     val funcionarios = listOf(joao, pedro, maria)
@@ -12,6 +12,9 @@ fun main(){
 
     separador("Buscando 'Maria Raimunda' em 'funcionarios' com .find{}:")
     println(funcionarios.find{it.nome == "Maria Raimunda"})
+
+    separador("Ordenando coleção com .sortedBy{}:")
+    funcionarios.sortedBy{it.salario}.forEach{println(it)}
 
 }
 
